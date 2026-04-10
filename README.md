@@ -96,8 +96,8 @@ Or fetch programmatically via the Mapillary API with a [client token](https://ww
 
 - Embeddings and code: MIT
 - Aerial chips: public domain (USDA NAIP)
-- POI metadata derived from Overture Maps (ODbL) and Mapillary (CC BY-SA 4.0)
+- POI metadata produced from Overture Maps (CDLA) and Mapillary (CC BY-SA 4.0)
 
 ## About
 
-Built by [Zephyr](https://zephyr.com). See also: [cross-view-embeddings](https://github.com/zephr-xyz/cross-view-embeddings) (private, model training code).
+Built by [Zephr](https://zephr.xyz). 
