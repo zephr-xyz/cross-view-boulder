@@ -4,7 +4,7 @@ Pre-computed cross-view embeddings for 3,303 points of interest in Boulder Count
 
 This means you can take an aerial image of a building and find its matching street-level view, or vice versa, using simple cosine similarity.
 
-Read the background: [Bridging the Gap Between What Satellites See and What You See on the Street](blog_cross_view_embeddings.md)
+Read the background: Future LinkedIn post
 
 ## What's in the box
 
