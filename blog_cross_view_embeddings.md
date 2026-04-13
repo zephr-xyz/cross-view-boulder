@@ -60,4 +60,4 @@ We're early in this work and there's a lot still to figure out. But the core ins
 
 ---
 
-*We're building this at Zephyr. If you're working on geospatial AI, embodied navigation, or multi-view representation learning, I'd love to connect.*
+*We're building this at Zephr. If you're working on geospatial AI, embodied navigation, or multi-view representation learning, I'd love to connect.*
