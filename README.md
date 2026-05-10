@@ -1,10 +1,10 @@
-# Cross-View Embeddings: Boulder County
+# Cross-View Embeddings: Boulder & Jefferson County
 
-Pre-computed cross-view embeddings for 3,303 points of interest in Boulder County, Colorado. Each POI has a learned embedding that encodes both its aerial appearance (from NAIP 30cm imagery) and its street-level appearance (from Mapillary) into a shared vector space.
+Pre-computed cross-view embeddings for 2,255 points of interest in Boulder and Jefferson County, Colorado. Each POI has a learned embedding that encodes both its aerial appearance (from NAIP 30cm imagery) and its street-level appearance (from Mapillary) into a shared vector space.
 
 This means you can take an aerial image of a building and find its matching street-level view, or vice versa, using simple cosine similarity.
 
-Read the background: Future LinkedIn post
+The model (XVEE v7) was jointly trained with a height prediction auxiliary task using 3DEP LiDAR point clouds, giving the backbone geometric understanding of building structure from aerial imagery alone.
 
 ## What's in the box
 
@@ -67,14 +67,23 @@ top5 = np.argsort(-sims)[:5]
 
 ## Retrieval performance
 
-Evaluated on held-out ground-aerial pairs (5,569 pairs across 2,258 locations):
+Evaluated on held-out ground-aerial pairs (2,255 POIs, Boulder + Jefferson County):
 
-| Embedding Dim | Storage per POI | Recall@1 | Recall@5 | INT8 Quantization Fidelity |
-|:---:|:---:|:---:|:---:|:---:|
-| 512-d (full) | 512 B | 90.7% | 99.6% | 0.999+ |
-| 256-d | 256 B | ~91% | ~99% | 0.999+ |
-| 128-d | 128 B | 91.1% | ~99% | 0.999+ |
-| 64-d | 64 B | 90.2% | ~98% | 0.999+ |
+| Embedding Dim | Storage per POI | Recall@1 | Recall@5 |
+|:---:|:---:|:---:|:---:|
+| 256-d | 256 B | 96.7% | 100% |
+| 128-d | 128 B | ~96% | ~100% |
+| 64-d | 64 B | ~95% | ~99% |
+
+### Height prediction (auxiliary task)
+
+The model also predicts building height (nDSM) from aerial imagery alone, supervised by 3DEP LiDAR:
+
+| Metric | Value |
+|:---:|:---:|
+| Mean MAE | 3.58m |
+| Median MAE | 3.38m |
+| <5m accuracy | 90.7% |
 
 ## Data sources
 
