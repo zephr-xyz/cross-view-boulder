@@ -89,6 +89,7 @@ The model also predicts building height (nDSM) from aerial imagery alone, superv
 
 - Aerial imagery: [NAIP](https://naip-usdaonline.hub.arcgis.com/) 2023 Colorado, 30cm resolution (public domain, USDA)
 - Street-level imagery: [Mapillary](https://www.mapillary.com/) (CC BY-SA 4.0). Image IDs are included in `poi_metadata.json` for fetching via the [Mapillary API](https://www.mapillary.com/developer/api-documentation).
+- Height supervision: [USGS 3DEP LiDAR](https://www.usgs.gov/3d-elevation-program) point clouds via [Entwine Point Tiles](https://registry.opendata.aws/usgs-lidar/) (public domain). Used to generate per-building nDSM targets for the auxiliary height prediction task.
 - POI and building data: [Overture Maps](https://overturemaps.org/) (ODbL)
 
 ## Viewing street-level images
